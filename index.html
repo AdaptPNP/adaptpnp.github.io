@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="AdaptPNP: Integrating Prehensile and Non-Prehensile Skills for Adaptive Robotic Manipulation.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdaptPNP: Integrating Prehensile and Non-Prehensile Skills for Adaptive Robotic Manipulation</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Castoro&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Nerfies index.css overrides */
+    body {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .footer .icon-link {
+      font-size: 25px;
+      color: #000;
+    }
+    .link-block a {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .publication-title {
+      font-family: 'DM Sans', 'Noto Sans', sans-serif;
+    }
+    .publication-authors {
+      font-family: 'DM Sans', 'Noto Sans', sans-serif;
+    }
+    .publication-authors a {
+      color: hsl(204, 86%, 53%) !important;
+    }
+    .publication-authors a:hover {
+      text-decoration: underline;
+    }
+    .author-block {
+      display: inline-block;
+    }
+    .publication-affiliations {
+      font-family: 'DM Sans', 'Noto Sans', sans-serif;
+      font-size: 0.9rem;
+    }
+    .publication-notes {
+      font-family: 'DM Sans', 'Noto Sans', sans-serif;
+      font-size: 0.85rem;
+    }
+    .publication-video {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      border-radius: 10px !important;
+    }
+    .publication-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    /* BibTeX 标题靠左（Bulma content 内 title 默认左对齐） */
+    #BibTeX .title {
+      text-align: left;
+    }
+    #BibTeX pre {
+      background-color: #f5f5f5;
+      padding: 1.25rem;
+      overflow-x: auto;
+      border-radius: 6px;
+    }
+    #BibTeX code {
+      font-size: 0.9em;
+      background: transparent;
+      padding: 0;
+    }
+    /* 每个 part 之间至少 4 行距离（约 6rem） */
+    .section .content-part {
+      margin-top: 6rem;
+    }
+    .section .content-part:first-child {
+      margin-top: 0;
+    }
+    .section {
+      padding-bottom: 4rem;
+    }
+    .hero {
+      padding-bottom: 2.5rem;
+    }
+    .publication-links {
+      margin-top: 1.5rem;
+    }
+    .figure-caption {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+    }
+    .tasks-setup-image {
+      max-width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #BibTeX.section {
+      padding-top: 5rem;
+    }
+    .footer {
+      padding-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">AdaptPNP: Integrating Prehensile and Non-Prehensile Skills for Adaptive Robotic Manipulation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Jinxuan Zhu<sup>*</sup><sup>1,2</sup>,</span>
+            <span class="author-block">Chenrui Tie<sup>*</sup><sup>1</sup>,</span>
+            <span class="author-block">Xinyi Cao<sup>*</sup><sup>3</sup>,</span>
+            <span class="author-block">Yuran Wang<sup>4</sup>,</span>
+            <span class="author-block">Jingxiang Guo<sup>1</sup>,</span>
+            <span class="author-block">Zixuan Chen<sup>1,5</sup>,</span>
+            <span class="author-block">Haonan Chen<sup>1</sup>,</span>
+            <span class="author-block">Junting Chen<sup>1</sup>,</span>
+            <span class="author-block">Yangyu Xiao<sup>2</sup>,</span>
+            <span class="author-block">Ruihai Wu<sup>4</sup>,</span>
+            <span class="author-block">Lin Shao<sup>†</sup><sup>1,2</sup></span>
+          </div>
+          <div class="publication-affiliations">
+            <span class="author-block"><sup>1</sup>National University of Singapore,</span>
+            <span class="author-block"><sup>2</sup>RoboScience,</span>
+            <span class="author-block"><sup>3</sup>East China Normal University,</span>
+            <span class="author-block"><sup>4</sup>Peking University,</span>
+            <span class="author-block"><sup>5</sup>Nanjing University</span>
+          </div>
+          <div class="publication-notes">
+            <span class="author-block"><sup>*</sup>Equal contribution</span>
+            <span class="author-block"><sup>†</sup>Corresponding author</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2511.11052" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.arxiv.org/abs/2511.11052" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered content-part">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <figure class="image">
+          <img src="Pipeline.png" alt="Pipeline of AdaptPNP">
+        </figure>
+        <div class="content has-text-justified figure-caption">
+          <p>
+            <strong>Fig. 1:</strong> Pipeline of AdaptPNP: Starting from an instruction and scene image, the task planner generates an initial plan (e.g., direct push), which is mentally rehearsed in the digital twin to sample a 6D target pose. After execution fails, the reflector analyzes the error and provides insight to the planner, which replans (e.g., grasp-and-move). This loop continues until the successful plan (push-to-edge-then-grasp) completes the task.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered content-part">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Non-prehensile (NP) manipulation, in which robots alter object states without forming stable grasps (for example, pushing, poking, or sliding), significantly broadens robotic manipulation capabilities when grasping is infeasible or insufficient. However, enabling a unified framework that generalizes across different tasks, objects, and environments while seamlessly integrating non-prehensile and prehensile (P) actions remains challenging: robots must determine when to invoke NP skills, select the appropriate primitive for each context, and compose P and NP strategies into robust, multi-step plans.
+          </p>
+          <p>
+            We introduce AdaptPNP, a vision-language model (VLM)-empowered task and motion planning framework that systematically selects and combines P and NP skills to accomplish diverse manipulation objectives. Our approach leverages a VLM to interpret visual scene observations and textual task descriptions, generating a high-level plan skeleton that prescribes the sequence and coordination of P and NP actions. A digital-twin based object-centric intermediate layer predicts desired object poses, enabling proactive mental rehearsal of manipulation sequences. Finally, a control module synthesizes low-level robot commands, with continuous execution feedback enabling online task plan refinement and adaptive replanning through the VLM.
+          </p>
+          <p>
+            We evaluate AdaptPNP across representative P&NP hybrid manipulation tasks in both simulation and real-world environments. These results underscore the potential of hybrid P&NP manipulation as a crucial step toward general-purpose, human-level robotic manipulation capabilities.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered content-part">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Tasks Setup</h2>
+        <figure class="image tasks-setup-image">
+          <img src="setup.png" alt="Tasks Setup">
+        </figure>
+        <div class="content has-text-justified figure-caption">
+          <p>
+            <strong>Fig. 2:</strong> We evaluate AdaptPNP on a spectrum of P&NP hybrid manipulation scenarios, including eight simulated tasks (top two rows) and four real-world tasks (bottom row). In each scene, the final target pose is shown as a translucent object, and the target region is indicated by a yellow overlay (e.g., Pusher, Hook).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered content-part">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/A-TAXxIVz1M?start=5&rel=0&showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{zhu2025adaptpnp,
+  title     = {AdaptPNP: Integrating Prehensile and Non-Prehensile Skills for Adaptive Robotic Manipulation},
+  author    = {Zhu, Jinxuan and Tie, Chenrui and Cao, Xinyi and Wang, Yuran and Guo, Jingxiang and Chen, Zixuan and Chen, Haonan and Chen, Junting and Xiao, Yangyu and Wu, Ruihai and Shao, Lin},
+  journal   = {arXiv preprint arXiv:2511.11052},
+  year      = {2025}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website template is adapted from the
+            <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies project page</a>
+            and is licensed under a
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
